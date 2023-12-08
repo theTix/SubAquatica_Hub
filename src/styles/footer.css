@@ -1,0 +1,38 @@
+.footer--section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(47, 84, 125);
+}
+
+.footer--social--icons {
+    padding-top: 70px;
+}
+
+.footer--icon {
+    margin: 0 10px;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.footer--icon:hover {
+    color: rgb(63, 128, 204);
+}
+
+.footer--copyright {
+    text-align: center;
+    font-size: 1.4rem;
+    margin: 40px 0 60px;
+}
+
+@media screen and (max-width: 900px) {
+    .footer--icon {
+        font-size: 1.5rem;
+    }
+
+    .footer--copyright {
+        font-size: 1.1rem;
+    }
+}

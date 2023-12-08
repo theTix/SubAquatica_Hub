@@ -1,0 +1,144 @@
+.section--four {
+    background: rgba(0,11,24,1);
+    color: #fff;
+    position: relative;
+}
+
+.section--four--img {
+    position: absolute;
+    width: 400px;
+    mask-image: radial-gradient(circle at center, black 20%, transparent 100%);
+    -webkit-mask-image: radial-gradient(circle at center, black 20%, transparent 100%);
+}
+
+.section--four--img.fish {
+    top: -100px;
+    left: 50px;
+    opacity: .6;
+    z-index: 1;
+}
+
+.section--four--img.jellyfish {
+    top: 200px;
+    right: 20px;
+    opacity: .4;
+    z-index: 1;
+}
+
+.section--four--title h2 {
+    text-align: center;
+    font-size: 3rem;
+    padding: 50px 0;
+}
+
+.section--four--form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section--four--fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    width: 70%;
+    margin: auto;
+}
+
+.section--four--fieldset input {
+    width: 100%;
+    font-size: 1.5rem;
+    background: rgb(0,26,56);
+    color: #fff;
+    opacity: .8;
+    border: none;
+    padding: 6px 10px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.section--four--submit--btn {
+    background: rgb(0, 35, 74);
+    color: #fff;
+    padding: 8px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    margin-bottom: 100px;
+    cursor: pointer;
+    z-index: 1;
+    position: static;
+    transition:.3s ease;
+}
+
+.section--four--submit--btn:hover {
+    background: rgb(0, 21, 45);
+}
+
+.section--four--submit--btn:active {
+    background: rgb(0, 28, 60);
+    transform: scale(0.95);
+}
+
+@keyframes btnClick {
+    0%, 100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-2px);
+    }
+
+    50% {
+        transform: translateX(2px);
+    }
+
+    75% {
+        transform: translateX(-2px);
+    }
+}
+
+.section--four--submit--btn:active::after {
+    content: "";
+    animation: btnClick 0.3s ease;
+}
+
+@media screen and (max-width: 1400px) {
+    .section--four--title h2 {
+        font-size: 2.8rem;
+    }
+}
+
+@media screen and (max-width: 1010px) {
+    .section--four--title h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .section--four--img.fish {
+        left: -30px;
+    }
+
+    .section--four--img.jellyfish {
+        top: 300px;
+        right: -100px;
+    }
+    
+    .section--four--fieldset input,
+    .section--four--submit--btn {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .section--four--title h2 {
+        font-size: 2.3rem;
+    }
+    
+}

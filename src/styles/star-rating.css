@@ -1,0 +1,7 @@
+.star-rating {
+    font-size: 1.6rem;
+}
+
+.selected {
+    color: rgb(253, 219, 0);
+}

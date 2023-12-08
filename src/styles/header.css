@@ -1,0 +1,220 @@
+
+body {
+    overflow-x: hidden;
+}
+
+.header--container {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    border-bottom: solid 1px gray;
+    color: #fff;
+    background: transparent;
+    width: 100%;
+    z-index: 2;
+}
+
+.header--container::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    backdrop-filter: blur(4px);
+    -webkit-filter: blur(4px);
+    -moz-filter: blur(4px);
+    -ms-filter: blur(4px);
+    -o-filter: blur(4px);
+    filter: blur(4px);
+    z-index: 1;
+}
+
+.header--container.wide::before {
+    width: 100%;
+}
+
+.header--title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    font-weight: 700;
+    position: relative;
+    z-index: 2;
+}
+
+.header--title h1 {
+    margin-right: 25px;
+    font-size: 3rem;
+}
+
+.header--title .header--icon {
+    font-size: 3rem;
+}
+
+.header--nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 2;
+}
+
+.header--nav a {
+    margin-left: 50px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 20px;
+    border: none;
+}
+
+.header--nav a:first-child {
+    color: #fff;
+    outline: solid 4px #fff;
+    backdrop-filter: blur(5px);
+}
+
+.header--nav a:hover {
+    box-shadow: 0 0 6px 6px rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(2px);
+}
+
+.header--nav a:first-child:hover {
+    outline: none;
+    background: #112845;
+}
+
+.hamburger--menu {
+    cursor: pointer;
+    font-size: 2rem;
+    display: none;
+    z-index: 2000;
+}
+
+.no--hamburger {
+    display: none;
+}
+
+.hamburger--content {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80%;
+    height: 100%;
+    z-index: 100;
+    background-color: #112845;
+    opacity: .95;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: swoosh .5s linear;
+    z-index: 1000;
+}
+
+
+@keyframes swoosh {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+    
+}
+
+.hamburger--content h2 {
+    font-size: 2.5rem;
+    margin-bottom:35px;
+    text-shadow: 0 0 15px rgb(22, 45, 175);
+}
+
+.hamburger--content a {
+    color: #5b79cb;
+    text-decoration: none;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    position: relative;
+}
+
+.hamburger--content a:hover {
+    color: #c0d1ff;
+}
+
+.hamburger--content a::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background: #c0d1ff;
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+}
+
+.hamburger--content a:hover::after {
+    width: 100%;
+    transition: .3s;
+}
+
+@media screen and (max-width: 1300px) {
+    .header--container {
+        padding: 1rem 1rem;
+    }
+
+    .header--container::before {
+        width: 100%;
+    }
+
+    .header--nav {
+        display: none;
+    }
+
+    .hamburger--menu {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .header--title h1 {
+        font-size: 2rem;
+    }
+
+    .header--title .header--icon {
+        font-size: 2rem;
+    }
+
+    .hamburger--menu {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .header--title h1 {
+        font-size: 1.3rem;
+    }
+
+    .header--title .header--icon {
+        font-size: 1.3rem;
+    }
+
+    .hamburger--menu {
+        font-size: 1.3rem;
+    }
+
+    .hamburger--content h2 {
+        font-size: 1.5rem;
+    }
+
+    .hamburger--content a {
+        font-size: 1rem;
+    }
+    
+}
+

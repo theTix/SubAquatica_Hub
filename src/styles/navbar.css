@@ -1,0 +1,14 @@
+.nav--hamburger--menu--icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 100;
+}
+
+@media screen and (max-width: 400px) {
+    .nav--hamburger--menu--icon {
+        font-size: 0.5rem;
+    }
+}

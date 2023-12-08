@@ -1,0 +1,105 @@
+.section--one {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    z-index: 2;
+}
+
+.section--one--text {
+    max-width: 40%;
+    color: white;
+    margin: 20px 0 20px 70px;
+    text-align: justify;
+}
+
+.section--one--text h1 {
+    margin-bottom: 20px;
+    font-size: 4rem;
+}
+
+.section--one--text p {
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.section--one--img {
+    width: 700px;
+    height: 900px;
+}
+
+@media screen and (max-width: 1400px) {
+    
+
+    .section--one--text h1 {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .section--one--text {
+        margin-top: 7rem;
+        position: relative;
+        left: 50%;
+        z-index: 1;
+        flex-direction: column;
+        justify-content: center;
+        transform: translateX(-50%);
+        height: 90vh;
+    }
+
+    .section--one--img {
+        position: absolute;
+        bottom: -5%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+        opacity: 0.2;
+    }
+
+    .section--one--text {
+        opacity: 1;
+        color: white;
+        max-width: 50%;
+        margin-left: 0;
+    }
+
+    .section--one--text h1 {
+        text-align: center;
+    }
+
+    .section--one--text p {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .section--one--text {
+        max-width: 70%;
+    }
+
+    .section--one--text p {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .section--one--text {
+        max-width: 80%;
+    }
+
+    .section--one--text p {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .section--one--text {
+        margin-top: 5rem;
+    }
+
+    .section--one--text h1 {
+        font-size: 2.2rem;
+    }
+}
